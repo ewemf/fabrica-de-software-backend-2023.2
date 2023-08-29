@@ -8,7 +8,7 @@ class ContaBancária ():
         self.metodosSac = metodosSac
     
     def contabancaria(self):
-        print (f'Oi, meu titular é {self.titular}, tenho {self.saldo} reais de saldo e esse é um dos métodos para depositar dinheiro: {self.metodosDep}; e esse para sacar dinheiro: {self.metodosSac}.')
+        print (f'Titular: {self.titular}; SALDO: {self.saldo}; Método para depositar dinheiro: {self.metodosDep}; Método para sacar dinheiro: {self.metodosSac}.')
 
 pessoa = ContaBancária('Ewellyn', 200, 'Depósito Bancário', 'Saque Digital')
 pessoa.contabancaria()
