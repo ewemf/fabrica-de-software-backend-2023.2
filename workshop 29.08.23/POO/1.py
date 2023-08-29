@@ -1,3 +1,5 @@
+#Classe Pessoa Crie uma classe chamada Pessoa que tenha atributos como nome, idade e profissão. Crie um método que imprima uma saudação com as informações da pessoa.
+
 class Pessoa():
     def __init__(self, nome, idade, profissao):
         self.nome = nome
