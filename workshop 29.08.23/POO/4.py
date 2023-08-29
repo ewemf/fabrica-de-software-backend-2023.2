@@ -14,7 +14,7 @@ class Retangulo(FormaGeometrica):
 class Circulo(FormaGeometrica):
     def area(self, raio):
         self.raio = raio
-        return 3.14159 * raio ** 2 #pi
+        return 3.14159 * raio ** 2
 
 retangulo = Retangulo()
 circulo = Circulo()
