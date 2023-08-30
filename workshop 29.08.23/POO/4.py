@@ -11,12 +11,19 @@ class Retangulo(FormaGeometrica):
     def calcular_a_area(self, base, altura):
         return base*altura
 
+class Quadrado(Retangulo):
+    pass
+
 circulo = Circulo()
 area = circulo.calcular_a_area(5)
 print(area)
 
 retangulo = Retangulo()
 area = retangulo.calcular_a_area(5, 10)
+print(area)
+
+quadrado = Quadrado()
+area = quadrado.calcular_a_area(2,2)
 print(area)
 
 # EXEMPLO FEITO NA SALA:
