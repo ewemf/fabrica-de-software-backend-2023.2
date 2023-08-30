@@ -2,29 +2,23 @@
 # ??
 
 class FormaGeometrica:
-    def area(self):
-        return self.largura * self.altura
-
-class Retangulo(FormaGeometrica):
-    def area(self, largura, altura):
-        self.largura = largura
-        self.altura = altura
-        return largura * altura
+    def calcular_a_area(self, raio):
+        return 3.14*(raio**2)
 
 class Circulo(FormaGeometrica):
-    def area(self, raio):
-        self.raio = raio
-        return 3.14159 * raio ** 2
+    pass
+
+class Retangulo(FormaGeometrica):
+    def calcular_a_area(self, base, altura):
+        return base*altura
+
+circulo = Circulo()
+area = circulo.calcular_a_area(5)
+print(area)
 
 retangulo = Retangulo()
-circulo = Circulo()
-
-largura = 2
-altura = 5
-raio = 3
-
-print("Área do RETÂNGULO:", retangulo.area(largura, altura))
-print("Área do CÍRCULO:", circulo.area(raio))
+area = retangulo.calcular_a_area(5, 10)
+print(area)
 
 # EXEMPLO FEITO NA SALA:
 
