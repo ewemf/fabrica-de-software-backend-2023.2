@@ -1,0 +1,46 @@
+		COMO CRIAR UMA API
+
+1. criar uma pasta
+2. cria um ambiente virtual (python -m venv venv)
+3. ativa a venv (.\venv\Script\activate.ps1)
+4. baixa django rest (pip install djangorestframework)
+5. cria o projeto (django-admin startproject nomedapasta .)
+6. cria o app (python .\manage.py startapp nomedoapp)
+7. usar ls para checar onde a pasta está no diretório e organizar melhor
+8. abre a pasta settings do projeto (no vs code) -> coloca dentro da installedapps o nome: rest_framework e o nome do app(não esquecer da virgula)
+9. fazer o python manage.py makemigrations e fazer o python manage.py migrate
+10. python manage.py runserver
+11. verifica no navegador se tem o foguetinho, se tiver, funcionou
+12. criar dois arquivos no app, o serializers.py e o urls.py
+13. importar na models from django.db import models
+14. modificar a models para adicionar as classes e a tabela pra recolher os dados.
+15. no serializers from rest_framework import serializers e from .models import modelo
+16. criar as classes serializer para converter de python para JSON e vice-versa (serializers.ModelSerializer):
+	- dentro de uma classe serializer criar a classe Meta:
+	- colocar o modelo
+	- selecionar os fields
+17. criar as views e jogar o serializers dentro:
+	- from rest_framework import viewsets
+	- from .models import modelo
+	- from .serializers import classeSerializer
+	- adicionar as classes p/ puxar os objetos do modelo e transportar o serializer para viewset
+18. ir para urls do app
+	-from rest_framework import routers
+	- from .views import classeviewset
+	- setar o router como DefaultRouter()
+	- registrar os routers das viewsets
+	- urlpatterns = router.urls
+19. ir para urls do projeto
+	- importar o include
+	- criar o path da urls criada no app
+20. python manage.py makemigrations
+	- python manage.py migrate
+	- python manage.py runserver
+21. vai no navegador para checar se houve mudança
+	- /nome_determinado_na_url
+22. testar os metodos.
+23. se der erro, Stackoverflow ou chatgpt
+
+		FIM.
+
+
